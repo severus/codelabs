@@ -6,7 +6,7 @@ ELEMENTS = $(TOOLS_DIR)/bazel-genfiles/bundle.zip
 PREFIX = /assets
 OUTDIR = public
 ELEMENTS_OUTDIR = $(OUTDIR)$(PREFIX)/codelab-elements
-GA_TRACKING_CODE = $(GA_TRACKING_CODE)
+GA_TRACKING_CODE ?= 0
 
 all: $(CLAAT) $(ELEMENTS)
 	echo $(SRCS)
