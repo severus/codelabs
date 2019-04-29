@@ -1,5 +1,5 @@
 authors: Petr Shevtsov
-summary: Mirror private GitHub repository to Google Cloud Platform Source Repositories without using GCP console
+summary: Mirror private GitHub repository to Google Cloud Platform Source Repositories without using Google Cloud Platform console
 id: mirror-github-to-gcp-source-repos
 categories: git
 environments: web
@@ -12,7 +12,7 @@ tags: cli, git, github, private repo, mirror repo, gcp, source repositories
 ## Overview
 Duration: 0:10
 
-In this codelab you will crate a Cloud Source Repository to mirror a private GitHub repository to your GCP project and also provision a GitHub webhook to keep repositories synchronized.
+In this codelab you will crate a Cloud Source Repository to mirror a private GitHub repository to your Google Cloud Platform project and also provision a GitHub webhook to keep repositories synchronized.
 
 ## Prerequisites
 Duration: 0:10
@@ -45,12 +45,12 @@ Let's store the name of the GitHub repository in the `GITHUB_REPO` environment v
 GITHUB_REPO="<github-username>/<github-repo>"
 ``` 
 
-## Create a New GCP Project
+## Create a New Google Cloud Platform Project
 Duration: 0:10
 
-In this section you will create a new GCP project and adjust some configurations.
+In this section you will create a new Google Cloud Platform project and adjust some configurations.
 
-Create a new GCP project named `git-mirror-codelab` and capture the project ID in the `PROJECT_ID` environment variable:
+Create a new Google Cloud Platform project named `git-mirror-codelab` and capture the project ID in the `PROJECT_ID` environment variable:
 
 ```console
 PROJECT_ID=$(gcloud projects create \
