@@ -1,0 +1,18 @@
+language: go
+go:
+- 1.11.x
+env:
+- BAZEL=0.18.1
+before_install:
+- |
+  wget -O install.sh "https://github.com/bazelbuild/bazel/releases/download/${BAZEL}/bazel-${BAZEL}-installer-linux-x86_64.sh"
+  chmod +x install.sh
+  ./install.sh --user
+  rm -f install.sh
+script:
+- make all
+deploy:
+  provider: firebase
+  token:
+    secure: GlG3E4v5kxxzJ5CQOiurQbkDruYVDiBxgHLCstCMB7ymNxrr5G1/PccNxEGJwV24GldBo3DFq0NaSwSXSdVxfR4ZcbpH71utlrDUjdt2G9azkZ/TtZrhAZV372aJdVDdnFBGD6dP9DeDVGeT84n9JuhDeKR4NV4+Z7TtWuoD6jOZ6OrcKc2qFc3kZYHA8aU3cLdCUb4lGhwa3WEU9U32JtO6qKS/n2cUPrHXbCuO/rUIch8qc533tcTAtUlHjx4MyZaKoeadUwbbwnnPDjebyN1AUVVsKEXzaauLL7UocC0DrZHTE5eTkiDJlDx4iA1eIUgCjE6Gx4yzFp4h3E+WC0vGy/H2PgGrGcMZHkEnD4o4aLsGNX1/k8chRkTi6+pWUYsWCKfhTA0bbUgtSDKimPZb17Ynf8PhXrs9/cPWTtA/cJx+96VjOhKU+sTNjvR5cF/Ee5Uw1BgzsH8aUEOvvMrDWOC970JnpgKoG2mS/1nOhH41944hi6NT/q1aO+ikTIBGl8WdZaPA0irrQ19/B7ulgvEff2LRHxUDLVFWVZKhQ6J57HdFbK+g5qFv7xlX2g0mceKW+6Vjs3fuPaqFB28uc0vIgNyoy+jXBoLRg/3lIEdhr8mSFR5S3HcbzefDqoB6vTGiqK0f13rf7RmWvSUmX5S0+z/TTBqxpk64f+w=
+  project: "severus-codelabs"
