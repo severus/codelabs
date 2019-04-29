@@ -3,6 +3,7 @@ go:
 - 1.11.x
 env:
 - BAZEL=0.18.1
+- GO111MODULE=on
 before_install:
 - |
   wget -O install.sh "https://github.com/bazelbuild/bazel/releases/download/${BAZEL}/bazel-${BAZEL}-installer-linux-x86_64.sh"
