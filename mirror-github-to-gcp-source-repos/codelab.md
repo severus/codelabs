@@ -3,8 +3,9 @@ summary: Mirror private GitHub repository to Google Cloud Platform Source Reposi
 id: mirror-github-to-gcp-source-repos
 categories: git
 environments: web
-status: draft
-analytics account: 0
+status: published
+analytics account: UA-139263513-1
+feedback link: https://github.com/severus/codelabs/issues
 tags: cli, git, github, private repo, mirror repo, gcp, source repositories
 
 # Mirror private GitHub repository to Cloud Source Repositories
